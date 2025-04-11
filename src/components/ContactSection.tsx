@@ -59,9 +59,9 @@ const ContactSection = () => {
               <a href="#book" className="inline-block px-8 py-3 bg-black text-white font-bold text-lg hover:bg-gray-800 transition-colors mr-4">
                 BOOK NOW
               </a>
-              <a href="tel:0895524242" className="inline-block px-8 py-3 border-2 border-black font-bold text-lg hover:bg-black hover:text-white transition-colors">
+              {/* <a href="tel:0895524242" className="inline-block px-8 py-3 border-2 border-black font-bold text-lg hover:bg-black hover:text-white transition-colors">
                 CALL US
-              </a>
+              </a> */}
             </div>
           </div>
 
