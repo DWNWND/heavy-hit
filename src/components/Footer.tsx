@@ -38,7 +38,7 @@ const Footer = () => {
         <hr className="border-gray-800 my-10" />
 
         <motion.div className="text-center text-gray-500 text-sm" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}>
-          <p>&copy; {currentYear} Heavy Hit Boxing. All rights reserved.</p>
+          <p>&copy; {currentYear} Heavy Hit Boxing Gym. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
         <a href="#" className="text-2xl md:text-3xl font-heading font-black tracking-wider flex gap-4 items-center">
           <img src={HHlogo} alt="logo" className="w-[5rem] object-cover object-center  transition-transform duration-500" />
-          <span>HEAVY HIT BOXING</span>
+          <span>HEAVY HIT BOXING GYM</span>
         </a>
 
         {/* Desktop Menu */}
