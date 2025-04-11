@@ -63,9 +63,9 @@ const GallerySection = () => {
           {galleryImages.map((image, index) => (
             <motion.div key={index} className="relative h-64 md:h-80 overflow-hidden rounded-lg" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: index * 0.1 }} whileHover={{ scale: 1.03 }}>
               <img src={image.src} alt={image.alt} className="w-full h-full object-cover transition-all duration-500" />
-              <motion.div className="absolute inset-0 bg-black/60 opacity-0 flex items-center justify-center" whileHover={{ opacity: 1 }}>
+              {/* <motion.div className="absolute inset-0 bg-black/60 opacity-0 flex items-center justify-center" whileHover={{ opacity: 1 }}>
                 <p className="text-white text-lg font-medium">{image.alt}</p>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           ))}
         </div>
