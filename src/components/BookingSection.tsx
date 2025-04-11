@@ -10,9 +10,9 @@ const BookingSection = () => {
         <div className="w-24 h-1 bg-white mx-auto mb-12"></div>
 
         <div className="max-w-3xl mx-auto text-center">
-          <div className="flex justify-center mb-8">
+          {/* <div className="flex justify-center mb-8">
             <MessageCircle size={64} />
-          </div>
+          </div> */}
 
           {/* <h3 className="text-2xl font-heading mb-4">BOOK VIA WHATSAPP</h3> */}
           {/* <p className="text-lg mb-6">We make booking easy! Simply send us a message on WhatsApp and our team will get back to you within 2 hours.</p> */}
