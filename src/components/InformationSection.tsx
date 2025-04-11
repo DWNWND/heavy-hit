@@ -29,7 +29,9 @@ const InformationSection = () => {
         <div className="w-24 h-1 bg-black mx-auto mb-12"></div>
         <motion.div className="flex flex-col justify-center items-center" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true, amount: 0.2 }}>
           <p className="max-w-2xl text-center text-xl mb-10 font-semibold">We are a gym that teaches Muay Thai and Western boxing for health, weight loss, and fitness. It is suitable for anyone who is interested, even those without any prior experience.</p>
-          <img src={InfoBoard} alt="logo" className="max-w-2xl object-cover object-center  transition-transform duration-500" />
+          <div className="flex justify-center items-center">
+            <img src={InfoBoard} alt="logo" className="max-w-2xl w-full object-cover object-center transition-transform duration-500" />
+          </div>
         </motion.div>
         {/* <Tabs defaultValue="group" className="w-full max-w-4xl mx-auto">
           <TabsList className="grid w-full grid-cols-2 mb-8">
