@@ -22,9 +22,9 @@ const Index = () => {
       <HeroSection />
       <ServicesSection />
       <InformationSection />
+      <BookingSection />
       {/* <TrainersSection /> */}
       <GallerySection />
-      <BookingSection />
       <ContactSection />
       <Footer />
     </motion.div>
