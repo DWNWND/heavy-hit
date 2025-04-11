@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import HHlogo from "/HH-white-big-logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,27 +28,28 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "#hero" },
     { name: "Services", href: "#services" },
-    { name: "Schedule", href: "#schedule" },
-    { name: "Trainers", href: "#trainers" },
+    { name: "Info", href: "#information" },
+    // { name: "Trainers", href: "#trainers" },
     { name: "Gallery", href: "#gallery" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-black text-white py-3 shadow-lg" : "bg-transparent text-white py-4"}`}>
+    <nav className={`fixed w-full z-50 transition-all font-OpenSans duration-300 ${isScrolled ? "bg-black text-white py-3 shadow-lg" : "bg-transparent text-white py-4"}`}>
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-        <a href="#" className="text-2xl md:text-3xl font-heading font-black tracking-wider">
-          HEAVY HIT BOXING
+        <a href="#" className="text-2xl md:text-3xl font-heading font-black tracking-wider flex gap-4 items-center">
+          <img src={HHlogo} alt="logo" className="w-[5rem] object-cover object-center  transition-transform duration-500" />
+          <span>HEAVY HIT BOXING</span>
         </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="font-medium hover:text-gray-300 transition-colors">
+            <a key={link.name} href={link.href} className="font-medium hover:text-gray-300 transition-all ease-in-out duration-300">
               {link.name}
             </a>
           ))}
-          <a href="#book" className="px-6 py-2 bg-white text-black font-bold hover:bg-gray-200 transition-colors">
+          <a href="#book" className="px-6 py-2 bg-white text-black font-bold hover:bg-gray-200 transition-all ease-in-out duration-300">
             BOOK NOW
           </a>
         </div>

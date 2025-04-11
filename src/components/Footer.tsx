@@ -1,44 +1,42 @@
-import React from "react";
+import { motion } from "framer-motion";
+import { Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className="bg-black text-white py-16 font-OpenSans">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <h3 className="text-2xl font-heading font-black tracking-wider mb-2">HEAVY HIT BOXING</h3>
+          <motion.div className="mb-8 md:mb-0" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+            <h3 className="text-3xl font-heading font-black tracking-wider mb-3">HEAVY HIT BOXING</h3>
             <p className="text-gray-400">Train Hard. Hit Harder.</p>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-            <a href="#hero" className="hover:text-gray-300 transition-colors">
-              Home
-            </a>
-            <a href="#services" className="hover:text-gray-300 transition-colors">
-              Services
-            </a>
-            <a href="#schedule" className="hover:text-gray-300 transition-colors">
-              Schedule
-            </a>
-            <a href="#trainers" className="hover:text-gray-300 transition-colors">
-              Trainers
-            </a>
-            <a href="#gallery" className="hover:text-gray-300 transition-colors">
-              Gallery
-            </a>
-            <a href="#contact" className="hover:text-gray-300 transition-colors">
-              Contact
-            </a>
-          </div>
+          <motion.div className="flex flex-wrap justify-center gap-5 md:gap-8" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
+            {["Home", "Services", "Schedule", "Trainers", "Gallery", "Contact"].map((item, i) => (
+              <motion.a key={i} href={`#${item.toLowerCase()}`} className="hover:text-gray-300 transition-colors relative group" whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+                {item}
+                <motion.span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white" initial={{ width: 0 }} whileHover={{ width: "100%" }} transition={{ duration: 0.2 }} />
+              </motion.a>
+            ))}
+          </motion.div>
         </div>
 
-        <hr className="border-gray-800 my-8" />
+        <motion.div className="flex justify-center space-x-6 mt-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
+          <a href="https://www.facebook.com/heavyhitboxing" className="hover:text-gray-300 transition-colors" aria-label="Instagram">
+            <Instagram size={24} />
+          </a>
+          <a href="https://www.instagram.com/explore/locations/733155146/heavy-hit-boxing-gym-chiang-mai/" className="hover:text-gray-300 transition-colors" aria-label="Facebook">
+            <Facebook size={24} />
+          </a>
+        </motion.div>
 
-        <div className="text-center text-gray-500 text-sm">
+        <hr className="border-gray-800 my-10" />
+
+        <motion.div className="text-center text-gray-500 text-sm" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}>
           <p>&copy; {currentYear} Heavy Hit Boxing. All rights reserved.</p>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

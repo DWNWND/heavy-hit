@@ -10,7 +10,8 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    // "noEmit": true,
+    "composite": true,
 
     /* Linting */
     "strict": true,
@@ -20,3 +21,16 @@
   },
   "include": ["vite.config.ts"]
 }
+
+// {
+//   "compilerOptions": {
+//     "composite": true,
+//     // other options
+//   }
+// }
+// ``````jsonc
+// {
+//   "compilerOptions": {
+//     // other options
+//   }
+// }

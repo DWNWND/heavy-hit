@@ -1,32 +1,37 @@
 import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import InfoBoard from "/infoboard-small.png";
+import { motion } from "framer-motion";
 
-const ScheduleSection = () => {
+const InformationSection = () => {
   const [activeTab, setActiveTab] = useState("group");
 
-  const groupSchedule = [
-    { day: "Monday", sessions: ["6:00 AM - 7:30 AM", "12:00 PM - 1:30 PM", "6:00 PM - 8:00 PM"] },
-    { day: "Tuesday", sessions: ["6:00 AM - 7:30 AM", "12:00 PM - 1:30 PM", "6:00 PM - 8:00 PM"] },
-    { day: "Wednesday", sessions: ["6:00 AM - 7:30 AM", "12:00 PM - 1:30 PM", "6:00 PM - 8:00 PM"] },
-    { day: "Thursday", sessions: ["6:00 AM - 7:30 AM", "12:00 PM - 1:30 PM", "6:00 PM - 8:00 PM"] },
-    { day: "Friday", sessions: ["6:00 AM - 7:30 AM", "12:00 PM - 1:30 PM", "6:00 PM - 8:00 PM"] },
-    { day: "Saturday", sessions: ["8:00 AM - 10:00 AM", "Open Gym: 10:00 AM - 2:00 PM"] },
-    { day: "Sunday", sessions: ["Closed"] },
-  ];
+  // const groupSchedule = [
+  //   { day: "Monday", sessions: ["6:00 AM - 7:30 AM", "12:00 PM - 1:30 PM", "6:00 PM - 8:00 PM"] },
+  //   { day: "Tuesday", sessions: ["6:00 AM - 7:30 AM", "12:00 PM - 1:30 PM", "6:00 PM - 8:00 PM"] },
+  //   { day: "Wednesday", sessions: ["6:00 AM - 7:30 AM", "12:00 PM - 1:30 PM", "6:00 PM - 8:00 PM"] },
+  //   { day: "Thursday", sessions: ["6:00 AM - 7:30 AM", "12:00 PM - 1:30 PM", "6:00 PM - 8:00 PM"] },
+  //   { day: "Friday", sessions: ["6:00 AM - 7:30 AM", "12:00 PM - 1:30 PM", "6:00 PM - 8:00 PM"] },
+  //   { day: "Saturday", sessions: ["8:00 AM - 10:00 AM", "Open Gym: 10:00 AM - 2:00 PM"] },
+  //   { day: "Sunday", sessions: ["Closed"] },
+  // ];
 
-  const privateSchedule = {
-    muayThai: "Available daily from 9:00 AM - 9:00 PM by appointment",
-    boxing: "Available daily from 9:00 AM - 9:00 PM by appointment",
-    note: "Private lessons are 60-90 minutes and can be booked via WhatsApp",
-  };
+  // const privateSchedule = {
+  //   muayThai: "Available daily from 9:00 AM - 9:00 PM by appointment",
+  //   boxing: "Available daily from 9:00 AM - 9:00 PM by appointment",
+  //   note: "Private lessons are 60-90 minutes and can be booked via WhatsApp",
+  // };
 
   return (
-    <section id="schedule" className="py-20 bg-gray-100 section-scroll">
+    <section id="information" className="py-20 bg-gray-100 section-scroll font-OpenSans">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-heading text-center mb-4">TRAINING SCHEDULE</h2>
+        <h2 className="text-3xl md:text-4xl font-heading text-center mb-4">INFORMATION</h2>
         <div className="w-24 h-1 bg-black mx-auto mb-12"></div>
-
-        <Tabs defaultValue="group" className="w-full max-w-4xl mx-auto">
+        <motion.div className="flex flex-col justify-center items-center" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} viewport={{ once: true, amount: 0.2 }}>
+          <p className="max-w-2xl text-center text-xl mb-10 font-semibold">We are a gym that teaches Muay Thai and Western boxing for health, weight loss, and fitness. It is suitable for anyone who is interested, even those without any prior experience.</p>
+          <img src={InfoBoard} alt="logo" className="max-w-2xl object-cover object-center  transition-transform duration-500" />
+        </motion.div>
+        {/* <Tabs defaultValue="group" className="w-full max-w-4xl mx-auto">
           <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="group" className="font-heading text-lg py-3">
               GROUP CLASSES
@@ -80,10 +85,10 @@ const ScheduleSection = () => {
               </div>
             </div>
           </TabsContent>
-        </Tabs>
+        </Tabs> */}
       </div>
     </section>
   );
 };
 
-export default ScheduleSection;
+export default InformationSection;

@@ -1,5 +1,6 @@
-import React from "react";
 import { MessageCircle, Clock, Calendar } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
+import LineQR from "/line-qr.png";
 
 const BookingSection = () => {
   return (
@@ -29,9 +30,21 @@ const BookingSection = () => {
             </div>
           </div>
 
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-white text-black font-bold text-lg hover:bg-gray-200 transition-colors">
+          <a href="https://wa.me/0895524242" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-white text-black font-bold text-lg hover:bg-gray-200 transition-colors">
             BOOK ON WHATSAPP
           </a>
+          <div className="flex flex-col gap-4 justify-center items-center mt-6">
+            <span>Or message us via one of the following channels:</span>
+            <div className="flex gap-4">
+              <a href="https://www.facebook.com/heavyhitboxing" className="hover:text-gray-300 transition-colors" aria-label="Instagram">
+                <Instagram size={34} />
+              </a>
+              <a href="https://www.instagram.com/explore/locations/733155146/heavy-hit-boxing-gym-chiang-mai/" className="hover:text-gray-300 transition-colors" aria-label="Facebook">
+                <Facebook size={34} />
+              </a>
+            </div>
+            <img src={LineQR} alt="line qr code" className="w-[10rem] object-cover object-center  transition-transform duration-500" />
+          </div>
 
           <p className="mt-8 text-gray-400">*Please include your name, preferred date/time, and session type (group/private) in your message</p>
         </div>

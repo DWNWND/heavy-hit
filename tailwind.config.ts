@@ -15,6 +15,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
+        OpenSans: ["Open Sans", "sans-serif"],
+        Bellota: ["Bellota Text", "sans-serif"],
         heading: ["Anton", "sans-serif"],
         body: ["Inter", "sans-serif"],
       },

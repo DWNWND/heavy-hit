@@ -3,10 +3,10 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const ContactSection = () => {
   const contactInfo = {
-    phone: "+1 (555) 123-4567",
-    email: "info@heavyhitboxing.com",
-    address: "123 Fighter Street, Downtown, Los Angeles, CA 90001",
-    hours: "Monday-Friday: 6AM-9PM | Saturday: 8AM-2PM | Sunday: Closed",
+    phone: "0895524242",
+    line: "tooktuck_m",
+    address: "51 ซอยเมตตา Suthep, Mueang Chiang Mai District, Chiang Mai 50200",
+    // hours: "Monday-Friday: 6AM-9PM | Saturday: 8AM-2PM | Sunday: Closed",
   };
 
   return (
@@ -32,8 +32,8 @@ const ContactSection = () => {
                 <div className="flex items-start">
                   <Mail className="w-6 h-6 mr-4 flex-shrink-0" />
                   <div>
-                    <h4 className="font-bold mb-1">Email</h4>
-                    <p>{contactInfo.email}</p>
+                    <h4 className="font-bold mb-1">Line ID</h4>
+                    <p>{contactInfo.line}</p>
                   </div>
                 </div>
 
@@ -45,13 +45,13 @@ const ContactSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                {/* <div className="flex items-start">
                   <Clock className="w-6 h-6 mr-4 flex-shrink-0" />
                   <div>
                     <h4 className="font-bold mb-1">Business Hours</h4>
                     <p>{contactInfo.hours}</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -59,14 +59,14 @@ const ContactSection = () => {
               <a href="#book" className="inline-block px-8 py-3 bg-black text-white font-bold text-lg hover:bg-gray-800 transition-colors mr-4">
                 BOOK NOW
               </a>
-              <a href="tel:+15551234567" className="inline-block px-8 py-3 border-2 border-black font-bold text-lg hover:bg-black hover:text-white transition-colors">
+              <a href="tel:0895524242" className="inline-block px-8 py-3 border-2 border-black font-bold text-lg hover:bg-black hover:text-white transition-colors">
                 CALL US
               </a>
             </div>
           </div>
 
           <div className="h-96 lg:h-auto animate-fade-in-up" style={{ animationDelay: "150ms" }}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27405770525!2d-118.69192047471653!3d34.02016130390376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sca!4v1650000000000!5m2!1sen!2sca" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.3237844484347!2d98.95466027541181!3d18.783718461082895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a77f36ec6fb%3A0xaa0164296947ef56!2sHeavy%20Hit%20Boxing%20Gym!5e0!3m2!1sno!2sth!4v1744360620712!5m2!1sno!2sth" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
